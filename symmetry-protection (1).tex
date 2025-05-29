@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{mathtools}
+
+\title{Symmetry Protection of Edge States in a 2D Topological Insulator}
+\author{Amin Marie Ann, Azarcon Vince,Balangue Jabbar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Investigate how time-reversal symmetry protects the gapless edge states in a 2D $Z_2$ topological insulator (like the Bernevig-Hughes-Zhang (BHZ) model).
+\end{abstract}
+
+\section{Mathematical Derivation}
+\begin{enumerate}
+    \item Start with the effective four-band BHZ model Hamiltonian in 2D:
+    
+    \[
+    H(\mathbf{k}) = \begin{pmatrix}
+    m(\mathbf{k}) & A k_x & 0 & -A k_y \\
+    A k_x & -m(\mathbf{k}) & -A k_y & 0 \\
+    0 & -A k_y & -m(\mathbf{k}) & -A k_x \\
+    -A k_y & 0 & -A k_x & m(\mathbf{k})
+    \end{pmatrix},
+    \]
+    where $m(\mathbf{k}) = M - B(k_x^2 + k_y^2)$.\\
+Answer: $4 \times4 $  Hamiltonian in momentum space $k_\pm = (k_x + k_y)$ is written in a block diagonal form\\
+\[ H(\mathbf{k}) = \begin{pmatrix}
+h(\mathbf{k}) & 0\\
+0 & h(\mathbf{k})
+\end{pmatrix}\]
+where $h(\mathbf{k}) $ is spin up and $h^\ast(\mathbf{-k})$ is spin down related by time reversal  symmetry.\\
+The model is defined as
+$\vert E, \uparrow \rangle, \vert H, \uparrow \rangle, \vert E, \downarrow \rangle, \vert H, \downarrow \rangle$\\
+For spin up block $h(\mathbf{k}):$\\
+This block couple: $\vert E, \uparrow \rangle, \vert H, \uparrow \rangle\\$\\
+
+\[ h(\mathbf{k}) = \begin{pmatrix}
+ m(\mathbf{k}) & A k_- \\
+ A k_+ & -m(\mathbf{k} \\
+\end{pmatrix}\]
+where: $k\pm = k_x \pm k_y$ then substitute this to $k_- $ and $k_+$. We will get\\
+\[ h(\mathbf{k}) = \begin{pmatrix}
+ m(\mathbf{k}) & A (k_x - k_y)\\
+ A (k_x + k_y) & -m(\mathbf{k}) \\
+\end{pmatrix}\]\\
+For spin downt this block couple: $\vert E, \downarrow \rangle, \vert H, \downarrow \rangle$\\
+\[ h\ast(\mathbf{-k}) = \begin{pmatrix}
+ -m(\mathbf{k}) & -A k_+\\
+ -A k_- & m(\mathbf{k}) \\
+\end{pmatrix}\]\\
+Substitute  $k\pm = k_x \pm k_y$ to $k_- $ and $k_+$. We will get\\
+\[ h(\mathbf{k}) = \begin{pmatrix}
+ -m(\mathbf{k}) & -A (k_x - k_y)\\
+ -A (k_x + k_y) & m(\mathbf{k}) \\
+\end{pmatrix}\]\\
+The given matrix for Hamiltonian is\\
+    \[
+    H(\mathbf{k}) = \begin{pmatrix}
+    m(\mathbf{k}) & A k_x & 0 & -A k_y \\
+    A k_x & -m(\mathbf{k}) & -A k_y & 0 \\
+    0 & -A k_y & -m(\mathbf{k}) & -A k_x \\
+    -A k_y & 0 & -A k_x & m(\mathbf{k})
+    \end{pmatrix},
+    \]\\
+We can write this in spin system matrix\\
+    \[
+    H(\mathbf{k}) = \begin{pmatrix}
+    m(\mathbf{k}) & A k_- & 0 & 0 \\
+    A k_+ & -m(\mathbf{k}) & 0 & 0 \\
+    0 & 0 & -m(\mathbf{k}) & -A k_+ \\
+  0 & 0 & -A k_- & m(\mathbf{k})
+    \end{pmatrix},
+    \]\\
+Why is that the $-A k_y$ in the diagonal becomes 0?\\
+$\ast$ The $-A k_y$ does not becomes zero. Since BHZ model does not include spin-flip terms. Primarily due to no coupling between spin-up and spin-down in the BHZ model.
+
+    \item Identify the time-reversal symmetry operator $\Theta$ for this system: $\Theta = \tau_0 \otimes i\sigma_y K$, where $K$ is complex conjugation.
+
+    \item Analyze the bulk band structure and demonstrate the topological nature of the insulating phase by calculating the $Z_2$ topological invariant.
+
+    \item Consider a finite-size strip geometry with open boundary conditions.
+
+    \item Analytically derive the dispersion relation of the edge states that appear within the bulk band gap.
+
+    \item Mathematically show how time-reversal symmetry enforces the Kramers degeneracy of the edge states at any momentum $k$ and prevents backscattering between counter-propagating edge states with opposite spin, thus protecting their gaplessness.
+\end{enumerate}
+
+\end{document}
